@@ -1,7 +1,8 @@
 #!/bin/bash
 set -m
 
-mongodb_cmd="mongod"
+MONGODB_ARGS = ${MONGODB_ARGS:-""}
+mongodb_cmd="mongod ${MONGODB_ARGS}"
 cmd="$mongodb_cmd"
 
 if [ "$AUTH" == "yes" ]; then
